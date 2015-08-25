@@ -28,6 +28,7 @@ class TestTableViewController: PFQueryTableViewController {
         if !IJReachability.isConnectedToNetwork() {
             query.fromLocalDatastore()
         }
+        query.orderByDescending("updateAt")
         return query
     }
     
@@ -52,11 +53,12 @@ class TestTableViewController: PFQueryTableViewController {
             let note = self.objectAtIndexPath(indexPath) as! Note
             if IJReachability.isConnectedToNetwork() {
                 note.deleteInBackgroundWithBlock({ (success, error) -> Void in
+                    note.unpin()
                     self.loadObjects()
                 })
             } else {
                 note.deleteEventually()
-                self.loadObjects()
+                delayedReload()
             }
         }
     }
@@ -80,9 +82,15 @@ class TestTableViewController: PFQueryTableViewController {
             })
         } else {
             note.saveEventually()
-            println("calling saveEventually")
-            self.loadObjects()
+            delayedReload()
         }
+    }
+    
+    func delayedReload() {
+        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(100 * Double(NSEC_PER_MSEC)))
+        dispatch_after(delay, dispatch_get_main_queue(), { () -> Void in
+            self.loadObjects()
+        })
     }
     
     @IBAction func editTable(sender: AnyObject) {
