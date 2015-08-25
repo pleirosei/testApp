@@ -17,7 +17,6 @@
 		6779E0811B8CB3C700DDF3F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6779E0791B8CB3C700DDF3F5 /* Security.framework */; };
 		6779E0821B8CB3C700DDF3F5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6779E07A1B8CB3C700DDF3F5 /* StoreKit.framework */; };
 		6779E0831B8CB3C700DDF3F5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6779E07B1B8CB3C700DDF3F5 /* SystemConfiguration.framework */; };
-		67A5C5971B8CB75C003A19C5 /* testApp-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 67A5C5961B8CB75C003A19C5 /* testApp-Bridging-Header.h */; };
 		67A5C5991B8CB7CF003A19C5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A5C5981B8CB7CF003A19C5 /* Note.swift */; };
 		67AD64A31B8CAE4000F8E19B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AD64A21B8CAE4000F8E19B /* AppDelegate.swift */; };
 		67AD64A51B8CAE4000F8E19B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AD64A41B8CAE4000F8E19B /* ViewController.swift */; };
@@ -290,7 +289,6 @@
 				67AD64A51B8CAE4000F8E19B /* ViewController.swift in Sources */,
 				671A09741B8CBF92007460C9 /* TestTableViewController.swift in Sources */,
 				67AD64A31B8CAE4000F8E19B /* AppDelegate.swift in Sources */,
-				67A5C5971B8CB75C003A19C5 /* testApp-Bridging-Header.h in Sources */,
 				67A5C5991B8CB7CF003A19C5 /* Note.swift in Sources */,
 				671A09761B8CEECB007460C9 /* SaveNoteViewController.swift in Sources */,
 				F1A4FC071B8CFF0800B2D7A2 /* IJReachability.swift in Sources */,

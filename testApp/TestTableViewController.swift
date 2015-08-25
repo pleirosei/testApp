@@ -47,6 +47,20 @@ class TestTableViewController: PFQueryTableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let note = self.objectAtIndexPath(indexPath) as! Note
+            if IJReachability.isConnectedToNetwork() {
+                note.deleteInBackgroundWithBlock({ (success, error) -> Void in
+                    self.loadObjects()
+                })
+            } else {
+                note.deleteEventually()
+                self.loadObjects()
+            }
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNote" {
             
@@ -55,6 +69,7 @@ class TestTableViewController: PFQueryTableViewController {
             destVC.newNote = passNote
         }
     }
+    
     @IBAction func addNote(sender: AnyObject) {
         let note = Note()
         note.title = NSUUID().UUIDString
@@ -65,7 +80,12 @@ class TestTableViewController: PFQueryTableViewController {
             })
         } else {
             note.saveEventually()
+            println("calling saveEventually")
             self.loadObjects()
         }
+    }
+    
+    @IBAction func editTable(sender: AnyObject) {
+        tableView.editing = !tableView.editing
     }
 }

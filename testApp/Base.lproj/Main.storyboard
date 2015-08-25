@@ -38,6 +38,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="RLn-hD-3jB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Y9u-1b-5m0">
+                            <connections>
+                                <action selector="editTable:" destination="KPe-lq-3Yu" id="KX0-au-OVn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Of-0l-9FH">
                             <connections>
                                 <action selector="addNote:" destination="KPe-lq-3Yu" id="uHu-1H-Fwr"/>
