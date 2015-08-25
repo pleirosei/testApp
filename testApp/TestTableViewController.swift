@@ -14,6 +14,7 @@ class TestTableViewController: UITableViewController {
     var allNotes: [Note] = []
     
     var passNote: Note!
+    var theIndex: AnyObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,23 +105,27 @@ class TestTableViewController: UITableViewController {
         
         cell.textLabel?.text = self.allNotes[indexPath.row].title
         
-        passNote = self.allNotes[indexPath.row]
-        
         println(self.allNotes)
 
         
         return cell
     }
     
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        let indexPath = self.tableView.indexPathForSelectedRow()
+        passNote = self.allNotes[indexPath.row]
+
         self.performSegueWithIdentifier("showNote", sender: self.tableView.cellForRowAtIndexPath(indexPath))
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNote" {
             
             let destVC = segue.destinationViewController as! ViewController
+            let cell = sender as! UITableViewCell
             destVC.newNote = passNote
         }
     }
