@@ -37,7 +37,13 @@
                             <outlet property="delegate" destination="KPe-lq-3Yu" id="PDN-Jx-HaS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RLn-hD-3jB"/>
+                    <navigationItem key="navigationItem" id="RLn-hD-3jB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Of-0l-9FH">
+                            <connections>
+                                <segue destination="afK-45-A1V" kind="push" id="Zzf-9k-spi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="showNote" id="xrw-D6-Efz"/>
                     </connections>
@@ -45,6 +51,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl4-JN-vR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="350" y="337"/>
+        </scene>
+        <!--Save Note View Controller-->
+        <scene sceneID="0kJ-EH-cPt">
+            <objects>
+                <viewController id="afK-45-A1V" customClass="SaveNoteViewController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U1r-ML-I2Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="cKQ-JZ-bQ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fC6-8L-aK6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-MM-xDy">
+                                <rect key="frame" x="112" y="178" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxX-Li-4pz">
+                                <rect key="frame" x="137" y="330" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveNote:" destination="afK-45-A1V" eventType="touchUpInside" id="w4W-1x-N2z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7n9-el-iGM"/>
+                    <connections>
+                        <outlet property="newNote" destination="Cya-MM-xDy" id="9rC-pH-Lre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K75-0Q-dm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="979"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
