@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E5E40253-A8F1-499C-97DC-422F2AF9B1AA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>testApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A1C268FC63495591759979FE2014B0B07C1630E2</key>
 		<string>https://github.com/pleirosei/testApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>testApp.xcodeproj/project.xcworkspace</string>
+	<string>testApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A1C268FC63495591759979FE2014B0B07C1630E2</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>A1C268FC63495591759979FE2014B0B07C1630E2</string>
 			<key>IDESourceControlWCCName</key>
-			<string>testApp</string>
+			<string>ShaunParseTestApp</string>
 		</dict>
 	</array>
 </dict>

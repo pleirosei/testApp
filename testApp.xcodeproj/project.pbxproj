@@ -30,6 +30,7 @@
 		67AD64C81B8CB07E00F8E19B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AD64C51B8CB07E00F8E19B /* ParseUI.framework */; };
 		67AD64CB1B8CB1E000F8E19B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AD64C91B8CB1E000F8E19B /* libsqlite3.dylib */; };
 		67AD64CC1B8CB1E000F8E19B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AD64CA1B8CB1E000F8E19B /* libz.dylib */; };
+		F1A4FC071B8CFF0800B2D7A2 /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A4FC061B8CFF0800B2D7A2 /* IJReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		67AD64C51B8CB07E00F8E19B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		67AD64C91B8CB1E000F8E19B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		67AD64CA1B8CB1E000F8E19B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F1A4FC061B8CFF0800B2D7A2 /* IJReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		67AD649F1B8CAE4000F8E19B /* testApp */ = {
 			isa = PBXGroup;
 			children = (
+				F1A4FC061B8CFF0800B2D7A2 /* IJReachability.swift */,
 				671A09751B8CEECB007460C9 /* SaveNoteViewController.swift */,
 				671A09731B8CBF92007460C9 /* TestTableViewController.swift */,
 				67AD64C21B8CB05500F8E19B /* Frameworks */,
@@ -290,6 +293,7 @@
 				67A5C5971B8CB75C003A19C5 /* testApp-Bridging-Header.h in Sources */,
 				67A5C5991B8CB7CF003A19C5 /* Note.swift in Sources */,
 				671A09761B8CEECB007460C9 /* SaveNoteViewController.swift in Sources */,
+				F1A4FC071B8CFF0800B2D7A2 /* IJReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +427,7 @@
 				INFOPLIST_FILE = testApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testApp/testApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -437,6 +442,7 @@
 				INFOPLIST_FILE = testApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testApp/testApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
