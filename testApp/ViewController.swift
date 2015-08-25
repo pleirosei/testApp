@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         
         newNote.title = noteTitle.text
         newNote.saveEventually(nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func loadNote() {
