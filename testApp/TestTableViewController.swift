@@ -52,7 +52,7 @@ class TestTableViewController: PFQueryTableViewController {
         if editingStyle == .Delete {
             let note = self.objectAtIndexPath(indexPath) as! Note
             if IJReachability.isConnectedToNetwork() {
-                note.deleteInBackgroundWithBlock({ (success, error) -> Void in
+                note.deleteInBackgroundWithBlock({ (su7ccess, error) -> Void in
                     note.unpin()
                     self.loadObjects()
                 })

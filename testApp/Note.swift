@@ -19,5 +19,5 @@ class Note: PFObject, PFSubclassing {
         super.init()
     }
     
-    @NSManaged var title: String
+    @NSManaged var title: String?
 }
